@@ -11,7 +11,7 @@ const distPath = path.join(process.cwd(), "dist/public");
 app.use(express.static(distPath));
 
 // SPA fallback
-app.get("*", (req, res) => {
+app.get("/*", (req, res) => {
   res.sendFile(path.join(distPath, "index.html"));
 });
 

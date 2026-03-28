@@ -12,7 +12,7 @@ app.use(express.static(distPath));
 
 // SPA fallback
 app.use((req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
+  res.sendFile(path.join(distPath, 'index.html'));
 });
 
 app.listen(PORT, () => {
